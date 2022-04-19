@@ -8,15 +8,16 @@
 </head>
 <body>
     <script>
-        const testNumber = prompt("점수를 입력해주세요");
-        // const numberArr = parseInt(testNumber.split(/[\s,]+/));
-        const numberArr = testNumber.split(/[\s,]+/);
-        console.log(numberArr[2]);  
-        const addNumber = 0;
-        for(var i=0; i<numberArr.length; i++) {
-            addNumber += parseInt(numberArr[i]);
+        const scores = prompt("점수를 입력해주세요. 예시.100 80 90");
+        // const arr = scores.split(/[\s,]+/);
+        // -> 기준점이 콤마(,)일 때
+        const arr = scores.split(" ");
+        // -> 기준점이 띄어쓰기일 때  
+        let sum = 0;
+        for(var i=0; i<arr.length; i++) {
+            sum += parseInt(arr[i]);
         };
-        console.log(addNumber);
+        console.log(Math.floor(sum/arr.length));
         
     </script>
 </body>
