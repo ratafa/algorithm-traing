@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const num = prompt('반지름을 입력해주세요');
+        let integer = parseInt(num);
+        console.log(typeof integer);
+        
+        function calc() {
+        let area = 0;
+        area = integer * integer * 3.14;
+        return area;
+        };
+
+        console.log(calc());
+    </script>
+</body>
+</html>
