@@ -12,9 +12,9 @@
         const scores = prompt('점수를 입력해주세요').split(' ');
         console.log(names);
         console.log(scores);
-        const object = {
-            names[0] : 'scores[0]',
-            names[1] : 'scores[1]'
+        let object = {};
+        for (let i=0; i<names.length; i++) {
+            object[names[i]] = scores[i];
         };
         console.log(object);
     </script>
