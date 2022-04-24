@@ -1,4 +1,4 @@
-# algorithm-traing
+# Algorithm-Traing
 Javascript
 
 ## 문제 및 해설
