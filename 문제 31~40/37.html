@@ -8,13 +8,24 @@
 </head>
 <body>
     <script>
-        const election = prompt('이름을 입력해주세요').split(' ');
-        console.log(election);
-        let count = election.filter(element -> )
+        // const array = ['원범', '원범', '혜원', '혜원', '혜원', '혜원', '유진', '유진'];
+        const array = prompt('이름을 입력해주세요').split(' ');
+        console.log(array);
+        let result = {};
+        let winner = "";
 
-        https://7942yongdae.tistory.com/49
-        https://hianna.tistory.com/488
-        // 원범 원범 혜원 혜원 혜원 혜원 유진 유진
+        for (index in array) {
+            let val = array[index];
+            result[val] = result[val] === undefined ? 1 : result[val] = result[val] + 1;
+        }
+
+        winner = Object.keys(result).reduce(function(a, b) {
+            return result[a] > result[b] ? a: b
+        });
+
+        document.write(`최다 득표자는 ${winner}이며, 총 ${result[winner]}표 입니다.`)
+        // https://7942yongdae.tistory.com/49
+        // https://hianna.tistory.com/488
     </script>
 </body>
 </html>
