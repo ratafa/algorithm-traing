@@ -8,13 +8,14 @@
 </head>
 <body>
     <script>
-        const sentence =  prompt('문장을 입력하세요');
-        let replace = sentence.replace(/q/g, 'e');
-
-        console.log(sentence);
-        console.log(replace);
-
-        // https://hianna.tistory.com/343
+        // const number = prompt('숫자를 입력해주세요');
+        const number = 11;
+        for(let i=2; i<number; i++) {
+            if(number % i===0){
+                console.log('no');
+            }
+            console.log('yes');
+        }
     </script>
 </body>
 </html>

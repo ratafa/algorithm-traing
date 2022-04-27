@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let total = 0;
+        let count = 0;
+        const rimit = prompt('제한 무게를 입력해주세요');
+        const member = prompt('인원 수를 입력해주세요');
+        for(let i=1; i<member; i++) {
+            total = total + parseInt(prompt('개인별 무게를 입력해주세요'));
+            if(total <= rimit) {
+                count = i;
+            }
+        }
+
+        console.log(count);
+    </script>
+</body>
+</html>
