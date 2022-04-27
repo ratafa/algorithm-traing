@@ -20,7 +20,7 @@
         }
 
         winner = Object.keys(result).reduce(function(a, b) {
-            return result[a] > result[b] ? a: b
+            return result[a] > result[b] ? a : b
         });
 
         document.write(`최다 득표자는 ${winner}이며, 총 ${result[winner]}표 입니다.`)
