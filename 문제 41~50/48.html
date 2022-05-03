@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sentence = prompt('');
+        let b = [];
+        let a = "";
+        for(let i=0; i<sentence.length; i++) {
+            if(sentence[i] === sentence[i].toLowerCase()) {
+                b.push(sentence[i].toUpperCase());
+                console.log(b);
+            } else {
+                b.push(sentence[i].toLowerCase());
+                console.log(b);
+            }
+        }
+
+        for(let j=0; j<b.length; j++) {
+            a += b[j];
+        }
+
+        console.log(a);
+    </script>
+</body>
+</html>
