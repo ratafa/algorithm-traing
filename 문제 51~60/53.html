@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function sort(e) {
+        let counter = 0;
+
+        for (let i=0; i<e.length; i++) {
+            if (e[i] === '(') {
+                counter++;
+            }
+            if (e[i] === ')') {
+                counter--;
+            }
+        }
+
+        if (counter !== 0) {
+            return false;
+        }
+
+        let blanket = [];
+
+        for (let i in e) {
+            if (e[i] === '(') {
+                blanket.push('(');
+            }
+            if (e[i] === ')') {
+                if (blanket.length === 0) {
+                    return false;
+                }
+                blanket.pop();
+            }
+        }
+        return true;
+    }
+</script>
+</body>
+</html>
