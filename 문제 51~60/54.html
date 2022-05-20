@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const n = prompt('입력해주세요').split(' ').map(n => parseInt(n, 10));
+
+    function sol(l){
+        // l.sort((a,b) => {
+        //     return a-b;
+        // });
+
+        for (let i=0; i<l.length-1; i++){
+            if(l[i]+1 !== l[i+1]){
+                return 'NO';
+            }
+        }
+        return 'YES';
+    }
+
+    console.log(sol(n));
+
+
+    // function calc() {
+    // for(let i=0; i<n.length-1; i++) {
+    //     if((n[i+1]) != (n[i] + 1)) {
+    //         return false;
+    //     } else {
+    //         return true;
+    //     }
+    // }
+    // }
+    //
+    // console.log(calc(n));
+
+
+</script>
+</body>
+</html>
