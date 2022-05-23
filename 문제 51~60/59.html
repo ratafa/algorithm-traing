@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const word = 'hi';
+    const n = 25 + parseInt(word.length / 2);
+    const left =  word.padStart(n, '=');
+    console.log(left);
+    console.log(left.length);
+
+    const right = word.padEnd(50, '=');
+    console.log(right);
+    console.log(right.length);
+</script>
+</body>
+</html>
