@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numb = [1, 2, 3, 4];
+    let string = ['a', 'b', 'c', 'd'];
+    let store = [];
+
+    numb.forEach((e,i) => {
+        if(i%2===0){
+            store.push([e, string[i]])
+        } else{
+            store.push([string[i], e])
+        }
+    })
+
+    console.log(store);
+</script>
+</body>
+</html>

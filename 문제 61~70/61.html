@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const user_s = new String(prompt('문자열을 입력하세요'));
+    // New String으로 하면 그냥 String으로 할 때와 달리 모든 문자가 배열화된다.
+    let result_s = '';
+    let store_s = user_s[0];
+    let count = 0;
+
+    console.log(store_s);
+    console.log(user_s);
+
+    for (i of user_s) {
+        // for in은 데이터가 obj일 때 사용합니다.
+        // for each는 데이터가 array일 때 사용합니다.
+        // https://codingapple.com/course-status/
+        //https://velog.io/@eomttt/for-...in-for-...of-%EC%B0%A8%EC%9D%B4
+
+        if (i == store_s) {
+            count++;
+        } else {
+            result_s += store_s + String(count);
+            store_s = i;
+            count = 1;
+        }
+    }
+
+    result_s += store_s + String(count);
+    console.log(result_s);
+
+</script>
+</body>
+</html>
