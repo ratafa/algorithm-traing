@@ -6,6 +6,33 @@
 </head>
 <body>
 <script>
+    const tower = ["ABCDEF", "BCAD", "ADEFQRX", "BEDFG", "EFGHZ"];
+    const rule = "ABCD";
+
+  function solution(tower, rule) {
+    let answer = [];
+    for (let part of tower) {
+        answer.push(check(part, rule));
+    }
+    return answer;
+  }
+
+  function check(part, rule) {
+      let temporary = rule.indexOf(rule[0]);
+      for(let word of part) {
+          if (rule.includes(word)) {
+              if (temporary > rule.indexOf(word)) {
+                  return '불가능';
+              } else {
+                  temporary = rule.indexOf(word);
+              }
+          }
+      }
+      return '가능';
+  }
+
+  console.log(solution(tower, rule));
+
 
 </script>
 </body>

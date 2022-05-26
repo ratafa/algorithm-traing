@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let prime = [];
+    let isPrime = true;
+
+    for (let i=2; i < 100; i++) {
+        for (let j = 2; j<i; j++) {
+            if (i % j === 0) {
+                isPrime = false;
+            }
+        }
+        if (isPrime) {
+            prime.push(i)
+        }
+        isPrime = true;
+    }
+
+    let val = 100;
+    let partition = [];
+
+    for (let n of prime) {
+        if (prime.includes(val - n) && n < val - n) {
+            partition.push([n, val - n]);
+        }
+    }
+
+    console.log(partition);
+
+
+</script>
+</body>
+</html>
