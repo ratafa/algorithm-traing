@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const graph = {'E': ['D', 'A'],
+                    'F': ['D'],
+                    'A': ['E', 'C', 'B'],
+                    'B': ['A'],
+                    'C': ['A'],
+                    'D': ['E','F']}
+
+    let stack = ['E'];
+    let n = stack.pop();
+
+    console.log(stack);
+    console.log(n);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const array1 = [[1, 2],[2, 4]];
+    const array2 = [[1, 0],[0, 3]];
+
+    function solution(a, b) {
+        let c = [];
+        const len = a[0].length;
+
+        if (len === b.length) {
+            for (let i=0; i<len; i++) {
+                let row = [];
+                for (let j=0; j<len; j++) {
+                    let x = 0;
+                    let store = [];
+                    for (let k=0; k<len; k++) {
+                        x += a[i][j] * b[k][j];
+                    }
+                    row.push(x);
+                }
+                c.push(row);
+            }
+            return c;
+        } else {
+            return -1;
+        }
+    }
+
+    console.log(solution(array1, array2));
+</script>
+</body>
+</html>
