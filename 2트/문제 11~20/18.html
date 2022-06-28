@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const nums = prompt('본인의 시험 점수를 입력해주세요').split(' ');
+
+    console.log(nums);
+    let nums2 = 0;
+
+    for (let i=0; i<nums.length; i++) {
+        nums2 += parseInt(nums[i],10);
+        console.log(nums2);
+    }
+
+
+    const nums3 = Math.round(nums2 / 3);
+
+    console.log(nums3);
+</script>
+</body>
+</html>

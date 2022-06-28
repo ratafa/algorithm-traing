@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Wizard {
+        constructor(a,b,c) {
+            this.health = a;
+            this.mana = b;
+            this.armor = c;
+        }
+        attack() {
+            console.log('파이어볼')
+        }
+    }
+
+    const x = new Wizard(545, 210, 10);
+    console.log(x.health, x.mana, x.armor);
+    x.attack();
+</script>
+</body>
+</html>

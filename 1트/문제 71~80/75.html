@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const sol = (num) => {
+        let result = 0;
+        let count = 1;
+        const d= {
+            3: 1,
+            6: 2,
+            9: 3,
+        }
+
+        while (num.length !== 0) {
+            result += d[parseInt(num.pop(), 10)] * count;
+            count *= 3;
+        }
+        return result
+    }
+
+    let input = prompt("숫자를 입력해주세요", '36').split('');
+    console.log(sol(input));
+
+</script>
+</body>
+</html>
