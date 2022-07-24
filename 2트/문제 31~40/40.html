@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const limit = prompt('기구의 몸무게 제한은 몇인가요?');
+    const member = prompt('탑승하려는 인원은 몇 몇인가요?');
+    let weight = 0;
+
+    for (let i = 1; i<=member; i++) {
+        weight += parseInt(prompt('무게를 입력해주세요'), 10);
+        if (weight > limit) {
+            alert(`${i - 1}명 탑승 가능합니다.`)
+            break;
+        }
+        console.log(weight)
+    }
+</script>
+</body>
+</html>

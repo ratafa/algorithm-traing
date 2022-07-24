@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 소수는 1과 자기 자신만을 나눌 수 있음.
+    const num = prompt('2 이상의 숫자를 입력해주세요.');
+
+    const isPrime = num => {
+        for (let i = 2; i<num; i++) {
+            if (num % i === 0) {
+                alert('소수가 아닙니다.');
+                return false;
+            }
+        }
+            alert('소수 입니다.')
+
+    }
+
+    isPrime(num);
+</script>
+</body>
+</html>

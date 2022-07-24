@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const month = prompt('월을 입력해주세요');
+    const day = prompt('일을 입력해주세요');
+
+    const solution = (a,b) => {
+        const week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+        const x = new Date(`2020-${a}-${b}`);
+        return console.log(week[x.getDay()]);
+    }
+
+    solution(month, day);
+
+    // 참조
+    // https://homzzang.com/b/js-218
+</script>
+</body>
+</html>
