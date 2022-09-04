@@ -6,14 +6,12 @@
 </head>
 <body>
 <script>
-    const num = '101112131415';
-    let sum = 0;
+    const now = new Date();
+    const nowTime = now.getTime();
 
-    num.split('').forEach(el => {
-        sum += parseInt(el, 10);
-    })
+    const result = Math.floor((nowTime / (365 * 24 * 60 * 60 * 1000)) + 1970);
 
-    console.log(sum);
+    console.log(`${result}년`);
 </script>
 </body>
 </html>

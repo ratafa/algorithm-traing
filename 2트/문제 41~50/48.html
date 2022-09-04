@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let word = prompt('문자를 입력해주세요.');
+  let arr = [];
+
+  for (let i=0; i<word.length; i++){
+      if (word[i] === word[i].toUpperCase()) {
+          arr.push(word[i].toLowerCase())
+      } else {
+          arr.push(word[i].toUpperCase())
+      }
+  }
+
+  console.log(arr.join(''));
+</script>
+</body>
+</html>
