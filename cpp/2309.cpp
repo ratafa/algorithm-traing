@@ -17,9 +17,7 @@ void solve(){
 }
 
 int main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+    ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
     for(int i=0; i<9; i++) {
         cin >> a[i]; // cin은 개행문자를 기준으로 받습니다. 그러니 20 7 23 19 10 15 25 8 13 이렇게 받을 수 있습니다.
         sum += a[i]; 
