@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std; 
-int a[9];
+int a[9]; //9개 자리의 빈 숫자 배열.
 int sum;
 pair<int, int> ret;
 vector<int> v;
