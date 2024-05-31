@@ -22,3 +22,5 @@ int main(){
     }
     return 0;
 }
+
+// https://velog.io/@dianestar/%EB%B0%B1%EC%A4%80BOJ-4375%EB%B2%88-1

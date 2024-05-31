@@ -1,3 +1,5 @@
+// 2-a
+
 #include<bits/stdc++.h>
 using namespace std; 
 const int max_n = 104; 
