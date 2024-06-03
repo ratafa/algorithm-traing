@@ -1,3 +1,5 @@
+// 2-c 2468
+
 #include<bits/stdc++.h>
 using namespace std;   
 int a[101][101], e[101][101], visited[101][101], n, temp, ret = 1;
