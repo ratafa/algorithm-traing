@@ -1,36 +1,39 @@
-#include <string>
-#include <vector>
-
+#include <bits/stdc++.h>
 using namespace std;
 
+string toBinary(int n) {
+    if (n == 0) return "0"; // 0일 경우 바로 반환
+
+    string binary = "";
+    while (n > 0) {
+        binary = to_string(n % 2) + binary; // 나머지를 앞에 추가
+        n /= 2; // 2로 나누기
+    }
+    return binary;
+}
+
+
 vector<int> solution(string s) {
-    vector<int> answer(2, 0);
-    int zero = 0, round = 0;
+    vector<int> answer;
+    int t = 0;
+    int z = 0;
+    string ret = s;
     
-    while(s != "1")
-    {
-        string tmp = "";
-        int size = 0, num;
-        round++;
-        
-        for(int i = 0; i < s.size(); i++)
-        {
-            if(s[i] == '0')
-                zero++;
-            else
-                tmp += "1";
+    while(ret != "1") {
+        string test;
+        int a = 0;
+        for(char i:ret) {
+            if(i == '1') a++;
+            else z++;
         }
-        
-        num = tmp.size();
-        s = "";
-        while(num > 0)
-        {
-            s += to_string(num % 2);
-            num /= 2;
-        }
+        t++;
+        test = toBinary(a);
+        ret = test;
+        cout << "z:" << z << "t:" << t << "ret:" << ret << "/";
     }
     
-    answer[0] = round;
-    answer[1] = zero;
+    answer.push_back(t);
+    answer.push_back(z);
+    
     return answer;
 }
